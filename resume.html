@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jatin Gulati – Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0c10;
+    --surface: #12151c;
+    --surface2: #1a1e28;
+    --border: rgba(255,255,255,0.08);
+    --gold: #c9a84c;
+    --gold-light: #e8c876;
+    --gold-dim: rgba(201,168,76,0.13);
+    --text: #e8e6e0;
+    --muted: #8a8a9c;
+    --white: #ffffff;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 2rem 1rem 3rem;
+  }
+
+  /* ── PRINT BUTTON ── */
+  .print-bar {
+    max-width: 900px; margin: 0 auto 1.5rem;
+    display: flex; justify-content: flex-end; gap: 0.75rem;
+    align-items: center;
+  }
+  .btn {
+    padding: 9px 22px; border-radius: 100px;
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    text-decoration: none; border: none; font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+  }
+  .btn-gold { background: var(--gold); color: #000; }
+  .btn-gold:hover { background: var(--gold-light); }
+  .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ── RESUME CARD ── */
+  .resume {
+    max-width: 900px; margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  /* ── HEADER ── */
+  .r-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.75rem;
+    align-items: center;
+    padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 2.5rem) 1.5rem;
+    background: linear-gradient(135deg, #12151c 60%, rgba(201,168,76,0.07));
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .r-avatar {
+    width: clamp(72px, 10vw, 96px);
+    height: clamp(72px, 10vw, 96px);
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--surface2);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .r-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .r-avatar-fallback {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; font-weight: 700; color: var(--gold); opacity: 0.5;
+  }
+  .r-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 900; color: var(--white);
+    line-height: 1.1;
+  }
+  .r-title {
+    margin-top: 4px;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .r-badge {
+    background: var(--gold); color: #000;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .r-role {
+    color: var(--muted); font-size: clamp(0.85rem, 1.5vw, 1rem);
+    font-weight: 400;
+  }
+  .r-contact {
+    margin-top: 0.75rem;
+    display: flex; gap: 1.25rem; flex-wrap: wrap;
+  }
+  .r-contact span {
+    font-size: 12px; color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .r-contact a { color: var(--muted); text-decoration: none; }
+  .r-contact a:hover { color: var(--gold); }
+
+  /* gold accent line top-right */
+  .r-header::after {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 120px; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+    border-radius: 0 16px 0 0;
+  }
+
+  /* ── BODY ── */
+  .r-body {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 0;
+  }
+
+  /* ── MAIN COL ── */
+  .r-main {
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    border-right: 1px solid var(--border);
+  }
+
+  /* ── SIDE COL ── */
+  .r-side {
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    background: var(--surface2);
+  }
+
+  /* ── SECTION ── */
+  .rs {
+    margin-bottom: 1.5rem;
+  }
+  .rs:last-child { margin-bottom: 0; }
+  .rs-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold);
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 0.75rem;
+  }
+  .rs-label::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
+  /* summary */
+  .r-summary {
+    font-size: 13px; color: var(--muted);
+    line-height: 1.65; font-weight: 300;
+  }
+
+  /* metrics strip */
+  .r-metrics {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); border-radius: 8px;
+    overflow: hidden; margin-bottom: 1.5rem;
+  }
+  .r-metric {
+    background: var(--surface);
+    padding: 10px 8px; text-align: center;
+  }
+  .r-metric-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 700; color: var(--gold); line-height: 1;
+  }
+  .r-metric-lbl {
+    font-size: 9px; color: var(--muted); margin-top: 3px;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    line-height: 1.3;
+  }
+
+  /* experience entries */
+  .exp-entry { margin-bottom: 1.25rem; }
+  .exp-entry:last-child { margin-bottom: 0; }
+  .exp-top {
+    display: flex; justify-content: space-between;
+    align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;
+    margin-bottom: 2px;
+  }
+  .exp-role {
+    font-size: 13px; font-weight: 600; color: var(--white);
+  }
+  .exp-period {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px; color: var(--gold);
+    letter-spacing: 0.06em; white-space: nowrap;
+    margin-top: 2px;
+  }
+  .exp-company {
+    font-size: 11px; color: var(--gold); margin-bottom: 5px;
+    font-weight: 500;
+  }
+  .exp-bullets { list-style: none; }
+  .exp-bullets li {
+    font-size: 12px; color: var(--muted);
+    padding: 2px 0 2px 1rem; position: relative; line-height: 1.5;
+  }
+  .exp-bullets li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--gold); font-size: 10px; top: 3px;
+  }
+
+  /* side sections */
+  .side-item { margin-bottom: 1.25rem; }
+  .side-item:last-child { margin-bottom: 0; }
+
+  .side-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .side-tag {
+    font-size: 10px;
+    background: var(--surface);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 3px 9px; border-radius: 5px;
+  }
+
+  .wins-list { list-style: none; }
+  .wins-list li {
+    font-size: 12px; color: var(--muted);
+    padding: 3px 0 3px 1rem; position: relative; line-height: 1.5;
+    border-bottom: 1px solid var(--border);
+  }
+  .wins-list li:last-child { border-bottom: none; }
+  .wins-list li::before {
+    content: '★'; position: absolute; left: 0;
+    color: var(--gold); font-size: 8px; top: 5px;
+  }
+
+  .vision-text {
+    font-size: 12px; color: var(--muted); line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .r-body { grid-template-columns: 1fr; }
+    .r-main { border-right: none; border-bottom: 1px solid var(--border); }
+    .r-metrics { grid-template-columns: repeat(2, 1fr); }
+    .r-header { grid-template-columns: 1fr; text-align: center; }
+    .r-avatar { margin: 0 auto; }
+    .r-title, .r-contact { justify-content: center; }
+    .print-bar { justify-content: center; }
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    @page { margin: 0.5in; size: letter; }
+    body { background: white; padding: 0; color: #111; }
+    .print-bar { display: none; }
+    .resume {
+      border: none; border-radius: 0;
+      max-width: 100%;
+    }
+    :root {
+      --bg: white;
+      --surface: white;
+      --surface2: #f5f5f5;
+      --border: #ddd;
+      --gold: #9a7a20;
+      --gold-dim: rgba(154,122,32,0.1);
+      --text: #111;
+      --muted: #555;
+      --white: #000;
+    }
+    .r-header { background: white; }
+    .r-header::after { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  <a href="index.html" class="btn btn-ghost">← Back to Site</a>
+  <button class="btn btn-gold" onclick="window.print()">⬇ Download / Print PDF</button>
+</div>
+
+<div class="resume">
+
+  <!-- HEADER -->
+  <div class="r-header">
+    <div class="r-avatar">
+      <img src="https://raw.githubusercontent.com/jatingulati1980/JatinGulati/Dev/assets/profile.png"
+           alt="Jatin Gulati"
+           onerror="this.style.display='none';document.getElementById('r-fallback').style.display='flex';" />
+      <div class="r-avatar-fallback" id="r-fallback" style="display:none;">JG</div>
+    </div>
+    <div>
+      <div class="r-name">Jatin Gulati</div>
+      <div class="r-title">
+        <span class="r-badge">Director</span>
+        <span class="r-role">Global End-to-End Delivery · AI & Automation Transformation</span>
+      </div>
+      <div class="r-contact">
+        <span>📍 Global · India / US / Sri Lanka / Canada / Mexico</span>
+        <span>✉️ <a href="mailto:jating@virtusa.com">jating@virtusa.com</a></span>
+        <span>🏢 Virtusa · Health Payer Client</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- METRICS STRIP -->
+  <div style="padding: 1rem clamp(1.25rem,2.5vw,2rem) 0;">
+    <div class="r-metrics">
+      <div class="r-metric">
+        <div class="r-metric-num">$400M+</div>
+        <div class="r-metric-lbl">Business Value</div>
+      </div>
+      <div class="r-metric">
+        <div class="r-metric-num">250+</div>
+        <div class="r-metric-lbl">Automations</div>
+      </div>
+      <div class="r-metric">
+        <div class="r-metric-num">38–40%</div>
+        <div class="r-metric-lbl">YoY Revenue Growth</div>
+      </div>
+      <div class="r-metric">
+        <div class="r-metric-num">5</div>
+        <div class="r-metric-lbl">Countries Led</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="r-body">
+
+    <!-- MAIN -->
+    <div class="r-main">
+
+      <!-- Summary -->
+      <div class="rs">
+        <div class="rs-label">Professional Summary</div>
+        <p class="r-summary">
+          Seasoned Director with 18+ years leading AI, intelligent automation, and global delivery programs across healthcare payer operations. Proven record of converting complex operations into enterprise value — growing accounts from $16M to $21M, securing $33M consolidation deals, and delivering $400M+ in business benefits. Deep expertise in agentic AI, RPA, GenAI COE, and stakeholder relationship expansion.
+        </p>
+      </div>
+
+      <!-- Experience 1 -->
+      <div class="rs">
+        <div class="rs-label">Experience</div>
+
+        <div class="exp-entry">
+          <div class="exp-top">
+            <div class="exp-role">Director / Global End-to-End Delivery Leader</div>
+            <div class="exp-period">OCT 2016 – PRESENT</div>
+          </div>
+          <div class="exp-company">Virtusa · Health Payer Client · HIL Business Unit</div>
+          <ul class="exp-bullets">
+            <li>Delivered &amp; maintained 250+ automation solutions generating ~$400M in business benefits</li>
+            <li>Grew account revenue from $16M → $21M; achieved 38–40% YoY growth</li>
+            <li>Secured $17M TCV for OIA support; supported $33M vendor consolidation deal</li>
+            <li>Expanded Express Scripts revenue 8× over two years</li>
+            <li>Delivered $7M annual savings via Clarif AI Recommendation Engine</li>
+            <li>Reduced call center handling time 30% via Knowledge Exchange Genie</li>
+            <li>Maintained &lt;5% attrition; grew exec stakeholders from 3 → 7</li>
+            <li>Enabled 80% OIA team cross-skilling across UiPath, Blue Prism &amp; Pega Robotics</li>
+          </ul>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-top">
+            <div class="exp-role">Manager – Automation &amp; Process Transformation</div>
+            <div class="exp-period">MAR 2008 – SEP 2016</div>
+          </div>
+          <div class="exp-company">EXL Services · Bangalore, India</div>
+          <ul class="exp-bullets">
+            <li>Transformed finance &amp; accounting processes through RPA; delivered $100K savings in year one</li>
+            <li>Migrated 200 users to VDI infrastructure in 60 days with zero productivity impact</li>
+            <li>Reduced process time by 320 hrs/month; delivered $180K through transition programs</li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /r-main -->
+
+    <!-- SIDE -->
+    <div class="r-side">
+
+      <!-- Skills -->
+      <div class="rs side-item">
+        <div class="rs-label">Automation Platforms</div>
+        <div class="side-tags">
+          <span class="side-tag">UiPath</span>
+          <span class="side-tag">Blue Prism</span>
+          <span class="side-tag">Automation Anywhere</span>
+          <span class="side-tag">Pega Robotics</span>
+          <span class="side-tag">ABBYY</span>
+          <span class="side-tag">WorkFusion</span>
+          <span class="side-tag">Kore.ai</span>
+          <span class="side-tag">Celonis</span>
+        </div>
+      </div>
+
+      <div class="rs side-item">
+        <div class="rs-label">AI & Strategy</div>
+        <div class="side-tags">
+          <span class="side-tag">Agentic AI</span>
+          <span class="side-tag">GenAI COE</span>
+          <span class="side-tag">AI Residency</span>
+          <span class="side-tag">Operating Model</span>
+          <span class="side-tag">Automation ROI</span>
+          <span class="side-tag">Executive Comms</span>
+        </div>
+      </div>
+
+      <div class="rs side-item">
+        <div class="rs-label">Domain</div>
+        <div class="side-tags">
+          <span class="side-tag">Healthcare Payer</span>
+          <span class="side-tag">Insurance</span>
+          <span class="side-tag">Claims Ops</span>
+          <span class="side-tag">Express Scripts</span>
+          <span class="side-tag">OIA</span>
+          <span class="side-tag">AI COE</span>
+        </div>
+      </div>
+
+      <div class="rs side-item">
+        <div class="rs-label">Leadership</div>
+        <div class="side-tags">
+          <span class="side-tag">Global Delivery</span>
+          <span class="side-tag">Revenue Growth</span>
+          <span class="side-tag">CoE Setup</span>
+          <span class="side-tag">People Dev</span>
+          <span class="side-tag">Margin Optimization</span>
+          <span class="side-tag">Portfolio Gov.</span>
+        </div>
+      </div>
+
+      <!-- Key Wins -->
+      <div class="rs side-item">
+        <div class="rs-label">Key Wins</div>
+        <ul class="wins-list">
+          <li>$33M OIA vendor consolidation deal</li>
+          <li>$17M TCV secured over 5 years</li>
+          <li>$7M/yr savings — Clarif AI Engine</li>
+          <li>8× ESI revenue expansion</li>
+          <li>30% AI revenue contribution</li>
+          <li>&lt;5% attrition across 5 countries</li>
+        </ul>
+      </div>
+
+      <!-- Vision -->
+      <div class="rs side-item">
+        <div class="rs-label">Vision</div>
+        <p class="vision-text">
+          Scaling Health Payer Client to $50M through AI expansion, PBM, Behavioral Health, Evicore, GCC enablement, and a repeatable AI residency model.
+        </p>
+      </div>
+
+    </div><!-- /r-side -->
+
+  </div><!-- /r-body -->
+
+</div><!-- /resume -->
+
+</body>
+</html>
