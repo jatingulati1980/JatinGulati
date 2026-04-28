@@ -1,0 +1,1 @@
+Add resume.pdf in root to enable Download Resume button if present.

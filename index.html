@@ -283,6 +283,106 @@ footer{padding:30px 16px;text-align:center;color:var(--muted);border-top:1px sol
 @media (prefers-reduced-motion: reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
+
+/* === FINAL APPLE / STRIPE HERO OVERRIDE === */
+.hero{
+  position:relative !important;
+  min-height:92vh !important;
+  display:flex !important;
+  align-items:center !important;
+  overflow:hidden !important;
+  padding:90px 0 80px !important;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 18%,rgba(79,156,255,.35),transparent 34%),
+    radial-gradient(circle at 78% 18%,rgba(139,92,246,.28),transparent 36%),
+    radial-gradient(circle at 55% 85%,rgba(236,72,153,.18),transparent 38%);
+  filter:blur(6px);
+  pointer-events:none;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:12%;
+  width:900px;
+  height:900px;
+  transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(255,255,255,.075),transparent 60%);
+  pointer-events:none;
+}
+.hero-grid{
+  position:relative !important;
+  z-index:2 !important;
+  display:grid !important;
+  grid-template-columns:1.12fr .88fr !important;
+  gap:56px !important;
+  align-items:center !important;
+}
+.hero-copy{max-width:780px}
+.hero h1{
+  font-size:clamp(52px,7vw,92px) !important;
+  line-height:.95 !important;
+  letter-spacing:-4px !important;
+  margin:0 0 24px !important;
+  max-width:900px !important;
+  background:linear-gradient(90deg,#ffffff,#dbeafe,#93c5fd) !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  color:transparent !important;
+}
+.hero h1 span{
+  display:block !important;
+  background:var(--gradient-main) !important;
+  background-size:220% auto !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  color:transparent !important;
+  animation:gradientMove 8s linear infinite !important;
+}
+.hero-sub{
+  font-size:20px !important;
+  line-height:1.75 !important;
+  color:#b8c7e6 !important;
+  max-width:760px !important;
+}
+.hero-profile{
+  backdrop-filter:blur(22px) !important;
+  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055)) !important;
+  border:1px solid rgba(255,255,255,.14) !important;
+  box-shadow:0 40px 100px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.08) !important;
+}
+.avatar{
+  width:84px !important;
+  height:84px !important;
+  border-radius:50% !important;
+  overflow:hidden !important;
+  border:3px solid rgba(255,255,255,.22) !important;
+  box-shadow:0 0 0 5px rgba(79,156,255,.18), 0 12px 35px rgba(0,0,0,.45) !important;
+  background:var(--gradient-main) !important;
+  flex:0 0 auto !important;
+}
+.avatar img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center top !important;
+  display:block !important;
+}
+@media(max-width:900px){
+  .hero{min-height:auto !important;padding:70px 0 60px !important}
+  .hero-grid{grid-template-columns:1fr !important;gap:34px !important}
+  .hero h1{font-size:52px !important;letter-spacing:-2px !important}
+  .hero-sub{font-size:17px !important}
+}
+@media(max-width:520px){
+  .hero h1{font-size:42px !important;letter-spacing:-1.5px !important}
+  .avatar{width:74px !important;height:74px !important}
+}
+
 </style>
 </head>
 
@@ -310,28 +410,30 @@ footer{padding:30px 16px;text-align:center;color:var(--muted);border-top:1px sol
 </nav>
 
 <header class="hero">
+  <div class="hero-bg"></div>
   <div class="container hero-grid">
-    <div>
-      <div class="status">Executive AI & Automation Transformation Leader</div>
-      <h1>Jatin <span>Gulati</span></h1>
+    <div class="hero-copy">
+      <div class="status">AI Transformation · Global Delivery · Healthcare Payer</div>
+      <h1>Enterprise AI transformation, <span>delivered at scale.</span></h1>
       <p class="hero-sub">
-        Director – Global End-to-End Delivery and AI transformation leader with 15+ years of experience driving
-        automation, revenue growth, global delivery, healthcare transformation, and enterprise-scale business outcomes.
+        Jatin Gulati leads global automation and AI delivery programs that convert complex healthcare operations into measurable enterprise value, revenue growth, and scalable transformation.
       </p>
-      <div class="hero-metrics">
-        <div class="hero-metric"><strong>$400M+</strong><span>Business benefits</span></div>
-        <div class="hero-metric"><strong>250+</strong><span>Automations delivered</span></div>
-        <div class="hero-metric"><strong>5</strong><span>Countries led</span></div>
-      </div>
       <div class="actions">
         <a class="btn primary" href="#impact">View Impact</a>
         <a class="btn" href="#experience">Career Timeline</a>
       </div>
+      <div class="hero-metrics">
+        <div class="hero-metric"><strong>$400M+</strong><span>Business Value</span></div>
+        <div class="hero-metric"><strong>250+</strong><span>Automations</span></div>
+        <div class="hero-metric"><strong>5</strong><span>Countries Led</span></div>
+      </div>
     </div>
 
-    <div class="profile-card">
+    <div class="profile-card hero-profile">
       <div class="profile-top">
-        <div class="avatar"><img src="assets/profile.svg" alt="Jatin Gulati profile photo"></div>
+        <div class="avatar">
+          <img src="assets/profile.svg" alt="Jatin Gulati">
+        </div>
         <div>
           <h2>Jatin Gulati</h2>
           <div class="role">Director, Global End-to-End Delivery</div>
@@ -344,7 +446,6 @@ footer{padding:30px 16px;text-align:center;color:var(--muted);border-top:1px sol
       <div class="contact-list">
         <div>📍 Global Delivery · Healthcare · Insurance</div>
         <div>✉️ jating@virtusa.com</div>
-        <div>🔗 LinkedIn: add-your-link-here</div>
         <div>🏢 Virtusa · Health Payer Client</div>
       </div>
       <div class="chips">
