@@ -1,463 +1,315 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Jatin Gulati - AI & Automation Transformation Leader driving enterprise value across healthcare payer operations, intelligent automation, and AI-led delivery.">
-<meta name="author" content="Jatin Gulati">
-<meta name="theme-color" content="#050814">
-<title>Jatin Gulati | AI & Automation Transformation Leader</title>
-<meta property="og:title" content="Jatin Gulati | AI & Automation Transformation Leader">
-<meta property="og:description" content="Executive portfolio for AI transformation, global delivery, and intelligent automation leadership.">
-<meta property="og:type" content="website">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Jatin Gulati - Director, AI and Automation Transformation Leader." />
+  <title>Jatin Gulati | AI &amp; Automation Transformation Leader</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --surface-2: #ffffff;
+      --text: #172033;
+      --muted: #596273;
+      --line: #dfe4ea;
+      --gold: #a67c16;
+      --gold-soft: #ffffff;
+      --navy: #12213d;
+      --shadow: 0 18px 45px rgba(18,33,61,.10);
+      --radius: 18px;
+      --max: 1160px;
+    }
 
-<style>
-:root{
-  --bg:#050814;
-  --bg2:#070d1f;
-  --panel:#0e1a33;
-  --panel2:#14264a;
-  --text:#f8fbff;
-  --muted:#9fb3d1;
-  --blue:#4f9cff;
-  --purple:#8b5cf6;
-  --pink:#ec4899;
-  --teal:#2dd4bf;
-  --gold:#fbbf24;
-  --gradient-main:linear-gradient(135deg,#4f9cff,#8b5cf6,#ec4899);
-  --line:rgba(255,255,255,.10);
-}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
 
-*{box-sizing:border-box;scroll-behavior:smooth}
+    .site-nav {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--navy); color: #fff;
+      font-weight: 800; letter-spacing: .04em;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; align-items: center; gap: 22px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 700; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { padding: 10px 16px; border-radius: 999px; background: var(--navy); color: #fff !important; }
 
-body{
-  margin:0;
-  font-family:Segoe UI,Arial,sans-serif;
-  background:
-    radial-gradient(circle at 15% 10%,rgba(79,156,255,.35),transparent 40%),
-    radial-gradient(circle at 85% 10%,rgba(139,92,246,.25),transparent 40%),
-    radial-gradient(circle at 50% 90%,rgba(236,72,153,.18),transparent 40%),
-    linear-gradient(180deg,var(--bg),var(--bg2));
-  color:var(--text);
-  animation:pageFade .8s ease-out;
-}
+    .hero { padding: 82px 0 64px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(280px,.75fr); align-items: center; gap: 68px; }
+    .eyebrow { color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    h1 {
+      max-width: 760px; margin-top: 14px;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.02; letter-spacing: -.035em;
+      color: var(--navy);
+    }
+    .hero-copy { max-width: 720px; margin-top: 24px; color: var(--muted); font-size: clamp(17px, 2vw, 20px); }
+    .hero-actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 44px; padding: 11px 18px; border-radius: 999px;
+      border: 1px solid var(--navy); text-decoration: none; font-weight: 800; font-size: 14px;
+    }
+    .button.primary { background: var(--navy); color: #fff; }
+    .button.secondary { background: #fff; color: var(--navy); }
+    .button:hover { transform: translateY(-1px); }
+    .hero-metrics { margin-top: 42px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; max-width: 650px; }
+    .hero-metric { background: #fff; padding: 18px; }
+    .hero-metric strong { display: block; color: var(--navy); font-family: Georgia, 'Times New Roman', serif; font-size: 28px; line-height: 1.1; }
+    .hero-metric span { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
 
-@keyframes pageFade{from{opacity:0}to{opacity:1}}
+    .portrait-wrap { position: relative; display: flex; justify-content: center; }
+    .portrait-card {
+      width: min(100%, 330px); /* slightly smaller profile image */
+      padding: 12px; border-radius: 26px;
+      background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow);
+    }
+    .portrait-card img { width: 100%; aspect-ratio: 173 / 183; object-fit: cover; border-radius: 18px; }
+    .portrait-badge {
+      position: absolute; right: 2%; bottom: 7%;
+      background: var(--navy); color: #fff; border-radius: 12px;
+      padding: 10px 13px; font-size: 12px; font-weight: 800; box-shadow: var(--shadow);
+    }
 
-a{text-decoration:none;color:inherit}
-p{color:var(--muted);line-height:1.75}
-.container{max-width:1180px;margin:auto;padding:0 22px}
+    section { padding: 76px 0; }
+    section.alt { background: #ffffff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; margin-bottom: 34px; }
+    .section-title { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(34px, 4vw, 52px); line-height: 1.08; color: var(--navy); letter-spacing: -.025em; }
+    .section-intro { color: var(--muted); max-width: 650px; }
 
-nav{
-  position:sticky;top:0;z-index:99;
-  backdrop-filter:blur(20px);
-  background:rgba(5,8,20,.86);
-  border-bottom:1px solid var(--line);
-}
-.nav-inner{
-  max-width:1180px;margin:auto;padding:16px 22px;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{
-  width:48px;height:48px;display:grid;place-items:center;
-  border-radius:16px;background:var(--gradient-main);
-  color:white;font-weight:900;box-shadow:0 0 30px rgba(79,156,255,.35);
-}
-.brand-text strong{display:block}
-.brand-text span{font-size:12px;color:var(--muted)}
-.nav-links{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:14px}
-.nav-links a{position:relative}
-.nav-links a::after{
-  content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;
-  background:var(--gradient-main);transition:.25s;
-}
-.nav-links a:hover::after{width:100%}
-.nav-cta{
-  padding:10px 15px;border-radius:999px;
-  background:var(--gradient-main);color:white;font-weight:800;
-}
+    .numbers-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; }
+    .number-card, .expertise-card, .leadership-card, .win-card, .skill-block {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px;
+    }
+    .number-card strong { display: block; font-family: Georgia, 'Times New Roman', serif; color: var(--gold); font-size: 36px; line-height: 1.1; }
+    .number-card p { color: var(--muted); margin-top: 8px; font-size: 14px; }
 
-.hero{min-height:88vh;display:grid;align-items:center;padding:70px 0}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}
-.status{
-  display:inline-flex;align-items:center;gap:10px;padding:9px 13px;
-  border-radius:999px;background:rgba(45,212,191,.09);
-  border:1px solid rgba(45,212,191,.25);color:#9ff7ea;
-  font-weight:800;font-size:13px;margin-bottom:18px;
-}
-.status:before{
-  content:"";width:8px;height:8px;background:var(--teal);
-  border-radius:50%;box-shadow:0 0 14px var(--teal);
-}
-h1{font-size:clamp(52px,7vw,96px);line-height:.92;letter-spacing:-3px;margin:0 0 22px}
-h1 span{
-  display:block;background:var(--gradient-main);
-  background-size:220% auto;-webkit-background-clip:text;color:transparent;
-  animation:gradientMove 7s linear infinite;
-}
-@keyframes gradientMove{to{background-position:220% center}}
-.hero-sub{font-size:20px;color:#d7e7f7;max-width:780px}
-.hero-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
-.hero-metric{
-  padding:18px;border-radius:22px;background:rgba(255,255,255,.06);
-  border:1px solid var(--line);
-}
-.hero-metric strong{font-size:28px;color:var(--gold);display:block}
-.hero-metric span{color:var(--muted);font-size:13px}
-.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-.btn{
-  padding:14px 22px;border-radius:999px;border:1px solid var(--line);
-  font-weight:900;transition:.25s;
-}
-.btn.primary{
-  background:var(--gradient-main);color:white;border:0;
-  box-shadow:0 8px 25px rgba(79,156,255,.35);
-}
-.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(79,156,255,.25)}
+    .four-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+    .card-num { color: var(--gold); font-size: 11px; letter-spacing: .15em; font-weight: 800; }
+    .card-title { color: var(--navy); font-size: 20px; font-weight: 800; margin-top: 8px; }
+    .card-copy { color: var(--muted); margin-top: 8px; font-size: 14px; }
 
-.profile-card{
-  position:relative;padding:30px;border-radius:34px;
-  background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.05));
-  border:1px solid var(--line);box-shadow:0 30px 90px rgba(0,0,0,.35);
-  overflow:hidden;animation:softFloat 7s ease-in-out infinite;
-}
-@keyframes softFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.profile-card:before{
-  content:"";position:absolute;inset:0;
-  background:
-    radial-gradient(circle at top right,rgba(79,156,255,.30),transparent 40%),
-    radial-gradient(circle at bottom left,rgba(236,72,153,.20),transparent 40%);
-  pointer-events:none;
-}
-.profile-card *{position:relative}
-.profile-top{display:flex;gap:16px;align-items:center;margin-bottom:20px}
-.avatar{
-  width:64px;height:64px;border-radius:20px;background:var(--gradient-main);
-  display:grid;place-items:center;color:white;font-size:24px;font-weight:900;
-  overflow:hidden;border:2px solid rgba(255,255,255,.22);
-  box-shadow:0 0 28px rgba(79,156,255,.28);
-}
-.avatar img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-.profile-card h2{margin:0;font-size:28px}
-.profile-card .role{color:var(--blue);font-weight:900}
-.contact-list{display:grid;gap:12px;margin-top:22px}
-.contact-list div{
-  padding:14px;border-radius:18px;background:rgba(255,255,255,.06);
-  border:1px solid var(--line);color:var(--muted);
-}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.chips span{
-  padding:8px 12px;border-radius:999px;background:rgba(79,156,255,.10);
-  border:1px solid rgba(79,156,255,.25);color:#bfefff;font-size:13px;
-}
+    .leadership-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
 
-section{padding:88px 0;border-top:1px solid rgba(255,255,255,.06)}
-.section-label{
-  color:var(--teal);font-size:13px;text-transform:uppercase;
-  letter-spacing:.09em;font-weight:900;
-}
-h2{font-size:clamp(32px,4vw,54px);letter-spacing:-1.5px;margin:10px 0 22px}
-.lead{max-width:900px;font-size:17px}
+    .wins-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+    .win-card h3 { color: var(--navy); font-size: 20px; }
+    .win-card ul { list-style: none; margin-top: 12px; }
+    .win-card li { position: relative; padding: 5px 0 5px 18px; color: var(--muted); font-size: 14px; }
+    .win-card li::before { content: '•'; position: absolute; left: 0; color: var(--gold); font-weight: 800; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+    .tag { background: var(--gold-soft); color: #76580d; border: 1px solid #ead9a8; border-radius: 999px; padding: 5px 10px; font-size: 11px; font-weight: 800; }
 
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
-.metric{
-  padding:26px;border-radius:26px;background:linear-gradient(180deg,var(--panel2),rgba(15,27,46,.72));
-  border:1px solid var(--line);transition:.28s;
-}
-.metric:hover{transform:translateY(-8px);border-color:rgba(139,92,246,.55);box-shadow:0 0 24px rgba(139,92,246,.20)}
-.metric strong{
-  display:block;font-size:34px;margin-bottom:8px;
-  background:linear-gradient(90deg,var(--gold),var(--pink));
-  -webkit-background-clip:text;color:transparent;
-}
-.metric span{color:var(--muted)}
+    .timeline { border-left: 2px solid var(--line); margin-left: 10px; padding-left: 28px; display: grid; gap: 34px; }
+    .timeline-item { position: relative; }
+    .timeline-item::before { content: ''; position: absolute; left: -37px; top: 7px; width: 15px; height: 15px; border-radius: 50%; background: #fff; border: 3px solid var(--gold); }
+    .period { color: var(--gold); font-weight: 800; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+    .role { color: var(--navy); font-size: 24px; font-weight: 800; margin-top: 4px; }
+    .company { color: var(--muted); font-weight: 700; margin-top: 2px; }
+    .timeline-item ul { margin: 12px 0 0 20px; color: var(--muted); }
+    .timeline-item li { margin: 5px 0; }
 
-.card-grid,.win-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:34px}
-.card,.win-card,.dna-card,.skill-box,.timeline-box{
-  transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
-}
-.card{
-  padding:28px;min-height:220px;border-radius:30px;
-  background:linear-gradient(180deg,var(--panel),var(--panel2));
-  border:1px solid var(--line);
-}
-.card:hover,.dna-card:hover,.win-card:hover,.skill-box:hover{
-  transform:translateY(-8px);box-shadow:0 10px 30px rgba(0,0,0,.4),0 0 20px rgba(139,92,246,.25);
-  border-color:#8b5cf6;
-}
-.card h3{margin:0 0 12px;font-size:24px}
+    .skills-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+    .skill-block h3 { color: var(--navy); font-size: 18px; margin-bottom: 12px; }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-list span { border: 1px solid var(--line); background: var(--surface); color: var(--muted); border-radius: 8px; padding: 7px 10px; font-size: 12px; font-weight: 700; }
 
-.dna-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-.dna-card{padding:24px;border-radius:26px;background:var(--panel);border:1px solid var(--line)}
-.dna-num{color:var(--gold);font-weight:900;font-size:14px;margin-bottom:16px}
+    .closing { background: #ffffff; color: var(--text); border: 1px solid var(--line); border-radius: 24px; padding: clamp(30px,5vw,58px); display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: center; box-shadow: var(--shadow); }
+    .closing .eyebrow { color: var(--gold); }
+    .closing h2 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(34px,4vw,54px); line-height: 1.08; margin-top: 10px; color: var(--navy); }
+    .closing p { color: var(--muted); margin-top: 16px; }
+    .closing-actions { display: flex; flex-direction: column; gap: 12px; }
+    .closing .button { width: 100%; border-color: var(--navy); color: var(--navy); background: #ffffff; }
+    .closing .button.primary { background: var(--navy); color: #ffffff; }
 
-.win-card{
-  position:relative;padding:30px;border-radius:30px;
-  background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.04));
-  border:1px solid var(--line);overflow:hidden;
-}
-.win-card:before{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(circle at top right,rgba(79,156,255,.18),transparent 35%);
-  pointer-events:none;
-}
-.win-card *{position:relative}
-.win-card h3{margin:0 0 12px;font-size:25px}
-.win-card ul{color:var(--muted);line-height:1.75;padding-left:20px}
-.win-impact{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.win-impact span{
-  padding:8px 12px;border-radius:999px;background:rgba(251,191,36,.12);
-  color:#f8d777;border:1px solid rgba(251,191,36,.25);font-size:13px;font-weight:800;
-}
 
-.timeline{position:relative;margin-top:40px}
-.timeline:before{
-  content:"";position:absolute;left:15px;top:0;bottom:0;width:3px;
-  background:linear-gradient(var(--blue),var(--purple),var(--pink));border-radius:99px;
-}
-.timeline-item{position:relative;padding-left:52px;margin-bottom:34px}
-.timeline-item:before{
-  content:"";position:absolute;left:4px;top:8px;width:24px;height:24px;border-radius:50%;
-  background:var(--bg);border:3px solid var(--blue);box-shadow:0 0 20px rgba(79,156,255,.45);
-}
-.timeline-box{
-  padding:28px;border-radius:30px;background:rgba(255,255,255,.055);border:1px solid var(--line);
-}
-.timeline-box small{color:var(--teal);font-weight:900}
-.timeline-box h3{margin:8px 0;font-size:25px}
-.timeline-box ul{color:var(--muted);line-height:1.75}
+    html, body, main, header, section, footer { background-color: #ffffff; }
+    footer { padding: 28px 0 38px; color: var(--muted); font-size: 13px; background: #ffffff; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
 
-.skill-group{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:34px}
-.skill-box{padding:26px;border-radius:28px;background:var(--panel);border:1px solid var(--line)}
-.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}
-.skills span{
-  padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.07);
-  border:1px solid var(--line);color:#dcecff;font-size:13px;
-}
-.cta{
-  text-align:center;padding:58px 30px;border-radius:36px;
-  background:
-    radial-gradient(circle at top left,rgba(79,156,255,.25),transparent 35%),
-    radial-gradient(circle at bottom right,rgba(236,72,153,.18),transparent 35%),
-    linear-gradient(135deg,rgba(20,38,74,.96),rgba(6,12,22,.96));
-  border:1px solid var(--line);
-}
-footer{padding:30px 16px;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
-
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr}
-  .hero{min-height:auto;padding:60px 0}
-  .nav-links{display:none}
-  .hero-metrics{grid-template-columns:1fr 1fr}
-  .metrics{grid-template-columns:1fr 1fr}
-  .card-grid,.dna-grid,.skill-group,.win-grid{grid-template-columns:1fr}
-  section{padding:62px 0}
-  h1{font-size:58px;letter-spacing:-2px}
-  h2{font-size:34px}
-}
-@media(max-width:520px){
-  .container{padding:0 18px}
-  .brand-text{display:none}
-  .nav-inner{padding:12px 16px}
-  .logo{width:42px;height:42px}
-  h1{font-size:46px;line-height:1}
-  h2{font-size:29px}
-  .hero-sub{font-size:16px}
-  .hero-metrics,.metrics{grid-template-columns:1fr}
-  .actions{flex-direction:column}
-  .btn{width:100%;text-align:center}
-  .profile-card,.card,.dna-card,.timeline-box,.skill-box,.cta,.win-card{border-radius:22px}
-  .profile-card,.timeline-box,.card,.skill-box,.win-card{padding:22px}
-  .timeline-item{padding-left:38px}
-  .timeline:before{left:10px}
-  .timeline-item:before{left:-1px}
-}
-@media (prefers-reduced-motion: reduce){
-  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-}
-</style>
+    @media (max-width: 920px) {
+      .nav-links li:not(:last-child) { display: none; }
+      .hero-grid, .section-head, .closing { grid-template-columns: 1fr; }
+      .portrait-wrap { grid-row: 1; }
+      .portrait-card { width: min(76vw, 300px); }
+      .numbers-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .leadership-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 26px, var(--max)); }
+      .hero { padding-top: 48px; }
+      .hero-actions { flex-direction: column; }
+      .button { width: 100%; }
+      .hero-metrics { grid-template-columns: 1fr; }
+      .numbers-grid, .four-grid, .leadership-grid, .wins-grid, .skills-grid { grid-template-columns: 1fr; }
+      section { padding: 58px 0; }
+      .role { font-size: 21px; }
+    }
+  </style>
 </head>
-
 <body>
-
-<nav>
-  <div class="nav-inner">
-    <div class="brand">
-      <div class="logo">JG</div>
-      <div class="brand-text">
-        <strong>Jatin Gulati</strong>
-        <span>Director · AI & Automation</span>
-      </div>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Back to top">JG</a>
+      <ul class="nav-links">
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#wins">Wins</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a class="nav-cta" href="#contact">Get in Touch</a></li>
+      </ul>
     </div>
-    <div class="nav-links">
-      <a href="#impact">Impact</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#dna">Leadership</a>
-      <a href="#wins">Wins</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a class="nav-cta" href="mailto:jating@virtusa.com">Get in Touch</a>
-    </div>
-  </div>
-</nav>
+  </nav>
 
-<header class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="status">Executive AI & Automation Transformation Leader</div>
-      <h1>Jatin <span>Gulati</span></h1>
-      <p class="hero-sub">
-        Director – Global End-to-End Delivery and AI transformation leader with 15+ years of experience driving
-        automation, revenue growth, global delivery, healthcare transformation, and enterprise-scale business outcomes.
-      </p>
-      <div class="hero-metrics">
-        <div class="hero-metric"><strong>$400M+</strong><span>Business benefits</span></div>
-        <div class="hero-metric"><strong>250+</strong><span>Automations delivered</span></div>
-        <div class="hero-metric"><strong>5</strong><span>Countries led</span></div>
-      </div>
-      <div class="actions">
-        <a class="btn primary" href="#impact">View Impact</a>
-        <a class="btn" href="#experience">Career Timeline</a>
-      </div>
-    </div>
-
-    <div class="profile-card">
-      <div class="profile-top">
-        <div class="avatar"><img src="assets/profile.svg" alt="Jatin Gulati profile photo"></div>
+  <main id="top">
+    <header class="hero">
+      <div class="container hero-grid">
         <div>
-          <h2>Jatin Gulati</h2>
-          <div class="role">Director, Global End-to-End Delivery</div>
+          <div class="eyebrow">Director · AI &amp; Automation Transformation Leader</div>
+          <h1>Enterprise AI transformation, delivered at scale.</h1>
+          <p class="hero-copy">Jatin Gulati leads global automation and AI delivery programs that convert complex healthcare operations into measurable enterprise value, revenue growth, and scalable transformation.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#impact">View Impact</a>
+            <a class="button secondary" href="#experience">Career Timeline</a>
+            <a class="button secondary" href="Jatin_Gulati_Resume.pdf" download>Download Resume</a>
+          </div>
+          <div class="hero-metrics" aria-label="Career highlights">
+            <div class="hero-metric"><strong>$400M+</strong><span>Business Value</span></div>
+            <div class="hero-metric"><strong>250+</strong><span>Automations</span></div>
+            <div class="hero-metric"><strong>5</strong><span>Countries Led</span></div>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <div class="portrait-card"><img src="assets/profile.png" alt="Professional portrait of Jatin Gulati" /></div>
+          <div class="portrait-badge">Global Delivery Leader</div>
         </div>
       </div>
-      <p>
-        Leading Health Payer Client delivery across India, US, Sri Lanka, Canada, and Mexico with focus on OIA,
-        AI COE, ESI growth, automation modernization, margin improvement, and measurable enterprise value.
-      </p>
-      <div class="contact-list">
-        <div>📍 Global Delivery · Healthcare · Insurance</div>
-        <div>✉️ jating@virtusa.com</div>
-        <div>🔗 LinkedIn: add-your-link-here</div>
-        <div>🏢 Virtusa · Health Payer Client</div>
+    </header>
+
+    <section id="impact" class="alt">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">By the Numbers</div><h2 class="section-title">Proven outcomes at enterprise scale.</h2></div>
+          <p class="section-intro">Measurable transformation across healthcare, intelligent automation, AI COE, revenue expansion, and global delivery.</p>
+        </div>
+        <div class="numbers-grid">
+          <article class="number-card"><strong>$400M+</strong><p>Business benefits generated over three years</p></article>
+          <article class="number-card"><strong>250+</strong><p>Automation solutions delivered and maintained</p></article>
+          <article class="number-card"><strong>38-40%</strong><p>Year-over-year account revenue growth</p></article>
+          <article class="number-card"><strong>$21M</strong><p>Revenue scale achieved from a $16M baseline</p></article>
+          <article class="number-card"><strong>$17M</strong><p>TCV secured for OIA support over five years</p></article>
+          <article class="number-card"><strong>8x</strong><p>Express Scripts revenue expansion over two years</p></article>
+          <article class="number-card"><strong>30%</strong><p>AI-driven revenue contribution</p></article>
+          <article class="number-card"><strong>&lt;5%</strong><p>Attrition across teams and functions</p></article>
+        </div>
       </div>
-      <div class="chips">
-        <span>AI Transformation</span><span>RPA</span><span>Agentic AI</span><span>Healthcare</span><span>Global Delivery</span>
+    </section>
+
+    <section id="expertise">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Industry Expertise</div><h2 class="section-title">Where outcomes meet automation scale.</h2></div>
+          <p class="section-intro">Deep delivery expertise across healthcare, insurance, AI-led automation, and enterprise transformation.</p>
+        </div>
+        <div class="four-grid">
+          <article class="expertise-card"><div class="card-num">01</div><h3 class="card-title">Healthcare Automation Delivery</h3><p class="card-copy">Led intelligent automation across healthcare payer operations, OIA delivery, AI COE support, claims operations, Rx POS support, and enterprise efficiency programs.</p></article>
+          <article class="expertise-card"><div class="card-num">02</div><h3 class="card-title">AI &amp; Agentic Transformation</h3><p class="card-copy">Pioneered agentic AI solutions, recommendation engines, and knowledge automation to generate measurable revenue, efficiency, and operational impact.</p></article>
+          <article class="expertise-card"><div class="card-num">03</div><h3 class="card-title">Revenue &amp; Portfolio Growth</h3><p class="card-copy">Grew account revenue from $16M to $21M, expanded ESI revenue 8x, and secured long-term TCV for automation support.</p></article>
+          <article class="expertise-card"><div class="card-num">04</div><h3 class="card-title">Global Delivery Leadership</h3><p class="card-copy">Managed distributed teams across India, US, Sri Lanka, Canada, and Mexico while maintaining high delivery quality and SLA discipline.</p></article>
+        </div>
       </div>
-    </div>
-  </div>
-</header>
+    </section>
 
-<section id="impact">
-  <div class="container">
-    <div class="section-label">By the Numbers</div>
-    <h2>Proven outcomes at enterprise scale.</h2>
-    <p class="lead">Measurable transformation across healthcare, intelligent automation, AI COE, revenue expansion, and global delivery.</p>
-    <div class="metrics">
-      <div class="metric"><strong>$400M+</strong><span>Business benefits generated over three years</span></div>
-      <div class="metric"><strong>250+</strong><span>Automation solutions delivered and maintained</span></div>
-      <div class="metric"><strong>38–40%</strong><span>Year-over-year account revenue growth</span></div>
-      <div class="metric"><strong>$21M</strong><span>Revenue scale achieved from $16M baseline</span></div>
-      <div class="metric"><strong>$17M</strong><span>TCV secured for OIA support over five years</span></div>
-      <div class="metric"><strong>8x</strong><span>Express Scripts revenue expansion over two years</span></div>
-      <div class="metric"><strong>30%</strong><span>AI-driven revenue contribution</span></div>
-      <div class="metric"><strong>&lt;5%</strong><span>Attrition across teams and functions</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="expertise">
-  <div class="container">
-    <div class="section-label">Industry Expertise</div>
-    <h2>Where business outcomes meet automation scale.</h2>
-    <p class="lead">Deep delivery expertise across healthcare, insurance, AI-led automation, operating model transformation, stakeholder growth, and enterprise automation value realization.</p>
-    <div class="card-grid">
-      <div class="card"><h3>Healthcare Automation Delivery</h3><p>Led intelligent automation across healthcare payer operations, OIA delivery, AI COE support, claims operations, Rx POS support, and enterprise efficiency programs.</p></div>
-      <div class="card"><h3>AI & Agentic Transformation</h3><p>Pioneered agentic AI solutions, recommendation engines, and knowledge automation to generate measurable revenue, efficiency, and operational impact.</p></div>
-      <div class="card"><h3>Revenue & Portfolio Growth</h3><p>Grew account revenue from $16M to $21M, expanded ESI revenue 8x, increased AI-driven revenue contribution, and secured long-term TCV for automation support.</p></div>
-      <div class="card"><h3>Global Delivery Leadership</h3><p>Managed distributed teams across India, US, Sri Lanka, Canada, and Mexico while maintaining high delivery quality, low attrition, SLA discipline, and future-ready capability.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="dna">
-  <div class="container">
-    <div class="section-label">Leadership DNA</div>
-    <h2>Core strengths that drive transformation.</h2>
-    <div class="dna-grid">
-      <div class="dna-card"><div class="dna-num">01</div><h3>Strategic Growth Leader</h3><p>Connects client objectives, AI strategy, revenue expansion, and delivery execution into measurable enterprise outcomes.</p></div>
-      <div class="dna-card"><div class="dna-num">02</div><h3>Client-First Partner</h3><p>Builds trusted executive relationships through proximity, ownership, business understanding, and delivery-led confidence.</p></div>
-      <div class="dna-card"><div class="dna-num">03</div><h3>Automation Value Creator</h3><p>Turns process complexity into scalable automation, AI, productivity, and operational value programs.</p></div>
-      <div class="dna-card"><div class="dna-num">04</div><h3>Operational Excellence</h3><p>Balances growth, margin, SLA discipline, productivity, delivery stability, and team performance across global operations.</p></div>
-      <div class="dna-card"><div class="dna-num">05</div><h3>People Developer</h3><p>Builds future-ready teams through cross-skilling, T4 enablement, leadership pipeline development, and succession planning.</p></div>
-      <div class="dna-card"><div class="dna-num">06</div><h3>AI-First Mindset</h3><p>Champions GenAI, agentic AI, AI COE operations, AI residency, and emerging technology adoption at scale.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="wins">
-  <div class="container">
-    <div class="section-label">Strategic Wins</div>
-    <h2>High-impact programs that shaped enterprise transformation.</h2>
-    <div class="win-grid">
-      <div class="win-card"><h3>OIA Vendor Consolidation</h3><p>Strengthened Virtusa’s position as a strategic automation partner and enabled predictable long-term growth.</p><ul><li>Supported $33M five-year vendor consolidation deal</li><li>Secured $17M OIA TCV support over five years</li><li>Enabled stable annual growth and delivery continuity</li></ul><div class="win-impact"><span>$33M Deal</span><span>$17M TCV</span><span>5-Year Growth</span></div></div>
-      <div class="win-card"><h3>AI Center of Excellence</h3><p>Built and scaled AI-led operating models through recommendation engines, knowledge automation, and AI-enabled support capabilities across enterprise operations.</p><ul><li>Delivered $7M annual savings through Clarif AI Recommendation Engine</li><li>Reduced call center handling time by 30% per interaction</li><li>Expanded AI-driven revenue contribution to 30%</li></ul><div class="win-impact"><span>$7M Savings</span><span>30% AHT Reduction</span><span>AI COE</span></div></div>
-      <div class="win-card"><h3>Automation Portfolio at Scale</h3><p>Delivered a large-scale automation portfolio across healthcare operations, combining RPA, intelligent automation, process assessment, and delivery governance.</p><ul><li>Delivered and maintained 250 automation solutions</li><li>Generated approximately $400M in business benefits</li><li>Institutionalized automation assessment and ROI frameworks</li></ul><div class="win-impact"><span>250+ Automations</span><span>$400M+ Value</span><span>Enterprise Scale</span></div></div>
-      <div class="win-card"><h3>Global Delivery & People Excellence</h3><p>Scaled global teams across five countries while maintaining strong delivery quality, high engagement, low attrition, and future-ready technical capability.</p><ul><li>Managed teams across India, US, Sri Lanka, Canada, and Mexico</li><li>Maintained less than 5% attrition across functions</li><li>Enabled cross-skilling across UiPath, Blue Prism, Pega Robotics, Gen AI, and AI COE operations</li></ul><div class="win-impact"><span>5 Countries</span><span>&lt;5% Attrition</span><span>AI Upskilling</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="container">
-    <div class="section-label">Career Timeline</div>
-    <h2>Enterprise transformation across AI, automation, and operations.</h2>
-    <div class="timeline">
-      <div class="timeline-item"><div class="timeline-box"><small>October 2016 – Present</small><h3>Director / Global End-to-End Delivery Leader</h3><p><b>Virtusa · Health Payer Client · HIL Business Unit</b></p><ul><li>Lead global delivery across India, US, Sri Lanka, Canada, and Mexico.</li><li>Delivered and maintained 250 automation solutions generating approximately $400M business benefits.</li><li>Grew revenue from $16M to $21M, achieving 38–40% YoY growth.</li><li>Secured $17M TCV for OIA support and supported a $33M vendor consolidation deal.</li><li>Expanded Express Scripts revenue 8x over two years.</li><li>Delivered $7M annual savings through Clarif AI Recommendation Engine.</li><li>Reduced call center handling time by 30% through Knowledge Exchange Genie.</li><li>Maintained less than 5% attrition across teams and functions.</li><li>Grew executive stakeholder relationships from 3 to 7 decision-makers.</li><li>Enabled 80% OIA team cross-skilling across BP, UiPath, and Pega Robotics.</li></ul></div></div>
-      <div class="timeline-item"><div class="timeline-box"><small>March 2008 – September 2016</small><h3>Manager – Automation & Process Transformation</h3><p><b>EXL Services · Bangalore, India</b></p><ul><li>Transformed manual finance and accounting processes through RPA and process improvement.</li><li>Delivered $100K savings in year one of automation implementation.</li><li>Migrated 200 users to new VDI infrastructure within 60 days without productivity impact.</li><li>Reduced process time by 320 hours per month through improvement initiatives.</li><li>Delivered $180K cost savings through transition and transformation programs.</li><li>Managed client requirements, functional specifications, high-level design, testing, and hypercare.</li></ul></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="container">
-    <div class="section-label">Capabilities</div>
-    <h2>Technical and functional toolkit.</h2>
-    <div class="skill-group">
-      <div class="skill-box"><h3>Automation & AI Platforms</h3><div class="skills"><span>UiPath</span><span>Blue Prism</span><span>Automation Anywhere</span><span>Pega Robotics</span><span>ABBYY</span><span>WorkFusion</span><span>Kore.ai</span><span>Celonis</span></div></div>
-      <div class="skill-box"><h3>Leadership & Delivery</h3><div class="skills"><span>Global Delivery</span><span>Revenue Growth</span><span>Margin Optimization</span><span>Stakeholder Management</span><span>CoE Setup</span><span>People Development</span><span>Portfolio Governance</span></div></div>
-      <div class="skill-box"><h3>Domain Strength</h3><div class="skills"><span>Healthcare</span><span>Insurance</span><span>Payer Operations</span><span>Claims Operations</span><span>Express Scripts</span><span>AI COE</span><span>OIA</span></div></div>
-      <div class="skill-box"><h3>Strategic Focus</h3><div class="skills"><span>Agentic AI</span><span>AI Residency</span><span>GenAI Upskilling</span><span>Operating Model</span><span>Automation ROI</span><span>Executive Communication</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-label">Future Vision</div>
-    <h2>Scaling Health Payer Client into an AI-first growth account.</h2>
-    <p class="lead">Focused on scaling Health Payer Client toward $50M revenue through AI expansion, Health Payer Client International growth, stable TCV programs, PBM, Behavioral Health, Evicore, GCC enablement, and an AI residency model that builds repeatable enterprise value.</p>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="cta">
-      <h2>Ready for strategic AI & automation leadership conversations.</h2>
-      <p>Global delivery, AI COE, healthcare transformation, intelligent automation modernization, enterprise operating models, and growth strategy.</p>
-      <div class="actions" style="justify-content:center">
-        <a class="btn primary" href="mailto:jating@virtusa.com">Send Email</a>
-        <a class="btn" href="resume.pdf" download>Download Resume</a>
+    <section class="alt">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Leadership DNA</div><h2 class="section-title">Core strengths that drive transformation.</h2></div>
+          <p class="section-intro">A balanced approach to growth, delivery, client partnership, people development, and AI-first execution.</p>
+        </div>
+        <div class="leadership-grid">
+          <article class="leadership-card"><div class="card-num">01</div><h3 class="card-title">Strategic Growth Leader</h3><p class="card-copy">Connects client objectives, AI strategy, revenue expansion, and delivery execution into measurable enterprise outcomes.</p></article>
+          <article class="leadership-card"><div class="card-num">02</div><h3 class="card-title">Client-First Partner</h3><p class="card-copy">Builds trusted executive relationships through proximity, ownership, business understanding, and delivery-led confidence.</p></article>
+          <article class="leadership-card"><div class="card-num">03</div><h3 class="card-title">Automation Value Creator</h3><p class="card-copy">Turns process complexity into scalable automation, AI, productivity, and operational value programs.</p></article>
+          <article class="leadership-card"><div class="card-num">04</div><h3 class="card-title">People Developer</h3><p class="card-copy">Builds future-ready teams through cross-skilling, T4 enablement, leadership pipeline development, and succession planning.</p></article>
+          <article class="leadership-card"><div class="card-num">05</div><h3 class="card-title">Operational Excellence</h3><p class="card-copy">Balances growth, margin, SLA discipline, productivity, delivery stability, and team performance across global operations.</p></article>
+          <article class="leadership-card"><div class="card-num">06</div><h3 class="card-title">AI-First Mindset</h3><p class="card-copy">Champions GenAI, agentic AI, AI COE operations, AI residency, and emerging technology adoption at scale.</p></article>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<footer>© 2026 Jatin Gulati · Director, AI & Automation Transformation</footer>
+    <section id="wins">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Strategic Wins</div><h2 class="section-title">High-impact programs that shaped enterprise transformation.</h2></div>
+          <p class="section-intro">Selected programs that combined executive sponsorship, delivery discipline, automation scale, and measurable business results.</p>
+        </div>
+        <div class="wins-grid">
+          <article class="win-card"><h3>OIA Vendor Consolidation</h3><ul><li>Supported $33M five-year vendor consolidation deal</li><li>Secured $17M OIA TCV support over five years</li><li>Enabled stable annual growth and delivery continuity</li></ul><div class="tags"><span class="tag">$33M Deal</span><span class="tag">$17M TCV</span><span class="tag">5-Year Growth</span></div></article>
+          <article class="win-card"><h3>AI Center of Excellence</h3><ul><li>Delivered $7M annual savings through Clarif AI Recommendation Engine</li><li>Reduced call center handling time by 30% per interaction</li><li>Expanded AI-driven revenue contribution to 30%</li></ul><div class="tags"><span class="tag">$7M Savings</span><span class="tag">30% AHT Reduction</span><span class="tag">AI COE</span></div></article>
+          <article class="win-card"><h3>Automation Portfolio at Scale</h3><ul><li>Delivered and maintained 250+ automation solutions</li><li>Generated approximately $400M in business benefits</li><li>Institutionalized automation assessment and ROI frameworks</li></ul><div class="tags"><span class="tag">250+ Automations</span><span class="tag">$400M+ Value</span><span class="tag">Enterprise Scale</span></div></article>
+          <article class="win-card"><h3>Global Delivery &amp; People Excellence</h3><ul><li>Managed teams across India, US, Sri Lanka, Canada, and Mexico</li><li>Maintained less than 5% attrition across functions</li><li>Enabled cross-skilling across UiPath, Blue Prism, Pega, GenAI, and AI COE</li></ul><div class="tags"><span class="tag">5 Countries</span><span class="tag">&lt;5% Attrition</span><span class="tag">AI Upskilling</span></div></article>
+        </div>
+      </div>
+    </section>
 
+    <section id="experience" class="alt">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Career Timeline</div><h2 class="section-title">Enterprise transformation across AI, automation, and operations.</h2></div>
+          <p class="section-intro">Leadership experience spanning complex global delivery, healthcare payer operations, AI programs, revenue growth, and process transformation.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item"><div class="period">October 2016 - Present</div><h3 class="role">Director / Global End-to-End Delivery Leader</h3><div class="company">Virtusa · Health Payer Client · HIL Business Unit</div><ul><li>Lead global delivery across India, US, Sri Lanka, Canada, and Mexico.</li><li>Delivered and maintained 250+ automation solutions generating approximately $400M in business benefits.</li><li>Grew revenue from $16M to $21M, achieving 38-40% year-over-year growth.</li><li>Secured $17M TCV for OIA support and supported a $33M vendor consolidation deal.</li><li>Expanded Express Scripts revenue 8x over two years.</li><li>Delivered $7M annual savings through the Clarif AI Recommendation Engine.</li><li>Reduced call center handling time by 30% through Knowledge Exchange Genie.</li><li>Maintained less than 5% attrition and expanded executive stakeholder relationships.</li></ul></article>
+          <article class="timeline-item"><div class="period">March 2008 - September 2016</div><h3 class="role">Manager - Automation &amp; Process Transformation</h3><div class="company">EXL Services · Bangalore, India</div><ul><li>Transformed manual finance and accounting processes through RPA and process improvement.</li><li>Delivered $100K savings in year one of automation implementation.</li><li>Migrated 200 users to new VDI infrastructure within 60 days without productivity impact.</li><li>Reduced process time by 320 hours per month through improvement initiatives.</li><li>Delivered $180K cost savings through transition and transformation programs.</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Capabilities</div><h2 class="section-title">Technical and functional toolkit.</h2></div>
+          <p class="section-intro">A combination of transformation strategy, global delivery leadership, domain depth, automation platforms, and emerging AI capabilities.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-block"><h3>Automation &amp; AI Platforms</h3><div class="skill-list"><span>UiPath</span><span>Blue Prism</span><span>Automation Anywhere</span><span>Pega Robotics</span><span>ABBYY</span><span>WorkFusion</span><span>Kore.ai</span><span>Celonis</span></div></article>
+          <article class="skill-block"><h3>Leadership &amp; Delivery</h3><div class="skill-list"><span>Global Delivery</span><span>Revenue Growth</span><span>Margin Optimization</span><span>Stakeholder Management</span><span>CoE Setup</span><span>People Development</span><span>Portfolio Governance</span></div></article>
+          <article class="skill-block"><h3>Domain Strength</h3><div class="skill-list"><span>Healthcare</span><span>Insurance</span><span>Payer Operations</span><span>Claims Operations</span><span>Express Scripts</span><span>AI COE</span><span>OIA</span></div></article>
+          <article class="skill-block"><h3>Strategic Focus</h3><div class="skill-list"><span>Agentic AI</span><span>AI Residency</span><span>GenAI Upskilling</span><span>Operating Model</span><span>Automation ROI</span><span>Executive Communication</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="closing">
+          <div><div class="eyebrow">Future Vision</div><h2>Ready for strategic AI &amp; automation leadership conversations.</h2><p>Focused on scaling Health Payer Client toward $50M revenue through AI expansion, stable TCV programs, PBM, Behavioral Health, and an AI residency model that builds repeatable enterprise value.</p></div>
+          <div class="closing-actions"><a class="button primary" href="mailto:jating@virtusa.com">Send Email</a><a class="button" href="Jatin_Gulati_Resume.pdf" download>Download Resume</a><a class="button" href="resume.html">View Printable Resume</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>Global Delivery · Healthcare · Insurance · AI &amp; Automation</span><span>© 2026 Jatin Gulati</span></div></footer>
 </body>
 </html>

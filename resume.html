@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jatin Gulati - One-Page Resume</title>
+  <style>
+    :root { --navy:#12213d; --gold:#a67c16; --text:#1c2433; --muted:#536071; --line:#d8dee6; --soft:#f4f6f8; }
+    * { box-sizing:border-box; }
+    html, body { margin:0; padding:0; background:#eef1f4; color:var(--text); font-family:Arial,Helvetica,sans-serif; }
+    .toolbar { width:8.5in; max-width:calc(100% - 24px); margin:18px auto 10px; display:flex; justify-content:flex-end; gap:8px; }
+    .toolbar a, .toolbar button { border:1px solid var(--navy); border-radius:999px; background:#fff; color:var(--navy); padding:9px 14px; font-weight:700; cursor:pointer; text-decoration:none; font-size:13px; }
+    .toolbar .primary { background:var(--navy); color:#fff; }
+    .page { width:8.5in; min-height:11in; margin:0 auto 24px; background:#fff; padding:.38in .42in .34in; box-shadow:0 16px 38px rgba(18,33,61,.14); }
+    .header { display:grid; grid-template-columns:84px 1fr; gap:16px; align-items:center; border-bottom:2px solid var(--navy); padding-bottom:10px; }
+    .photo { width:78px; height:82px; object-fit:cover; border-radius:10px; border:2px solid var(--gold); }
+    h1 { margin:0; font-family:Georgia,'Times New Roman',serif; font-size:29px; color:var(--navy); line-height:1; }
+    .headline { margin-top:4px; color:var(--gold); font-weight:800; font-size:12px; text-transform:uppercase; letter-spacing:.07em; }
+    .contact { margin-top:6px; color:var(--muted); font-size:9.5px; line-height:1.35; }
+    .summary { margin:10px 0 8px; color:var(--muted); font-size:9.3px; line-height:1.38; }
+    .metrics { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); border-radius:8px; overflow:hidden; margin-bottom:9px; }
+    .metric { padding:6px 5px; text-align:center; border-right:1px solid var(--line); background:var(--soft); }
+    .metric:last-child { border-right:0; }
+    .metric strong { display:block; color:var(--navy); font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1; }
+    .metric span { display:block; margin-top:2px; color:var(--muted); font-size:7px; text-transform:uppercase; letter-spacing:.04em; }
+    .columns { display:grid; grid-template-columns:1fr 2.28in; gap:16px; }
+    .side { border-left:1px solid var(--line); padding-left:14px; }
+    .section { margin-bottom:8px; }
+    .section:last-child { margin-bottom:0; }
+    .section-title { color:var(--navy); font-weight:900; font-size:9px; text-transform:uppercase; letter-spacing:.12em; padding-bottom:3px; border-bottom:1px solid var(--line); margin-bottom:5px; }
+    .job { margin-bottom:7px; }
+    .job:last-child { margin-bottom:0; }
+    .job-top { display:flex; justify-content:space-between; gap:8px; align-items:flex-start; }
+    .role { color:var(--navy); font-weight:800; font-size:10px; line-height:1.2; }
+    .period { color:var(--gold); font-size:7.5px; font-weight:800; white-space:nowrap; text-transform:uppercase; }
+    .company { color:var(--gold); font-size:8px; font-weight:700; margin:1px 0 3px; }
+    ul { margin:0; padding-left:13px; }
+    li { color:var(--muted); font-size:8.15px; line-height:1.28; margin:1px 0; }
+    .tag-wrap { display:flex; flex-wrap:wrap; gap:4px; }
+    .tag { background:var(--soft); border:1px solid var(--line); border-radius:5px; padding:3px 5px; color:var(--muted); font-size:7.3px; font-weight:700; }
+    .side-list { list-style:none; padding:0; }
+    .side-list li { border-bottom:1px solid var(--line); padding:3px 0; font-size:7.8px; }
+    .side-list li:last-child { border-bottom:0; }
+    .vision { color:var(--muted); font-size:8px; line-height:1.35; font-style:italic; }
+    .footer-note { margin-top:7px; text-align:center; color:#7a8493; font-size:6.8px; }
+
+    @page { size: Letter; margin:0; }
+    @media print {
+      html, body { background:#fff; }
+      .toolbar { display:none !important; }
+      .page { width:8.5in; height:11in; min-height:0; margin:0; box-shadow:none; overflow:hidden; page-break-after:avoid; }
+    }
+    @media (max-width:850px) {
+      .page { width:100%; min-height:auto; padding:24px; }
+      .toolbar { width:auto; }
+      .columns { grid-template-columns:1fr; }
+      .side { border-left:0; padding-left:0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a href="index.html">Back to Portfolio</a>
+    <a class="primary" href="Jatin_Gulati_Resume.pdf" download>Download Resume</a>
+    <button type="button" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <article class="page">
+    <header class="header">
+      <img class="photo" src="assets/profile.png" alt="Jatin Gulati" />
+      <div>
+        <h1>Jatin Gulati</h1>
+        <div class="headline">Director · Global End-to-End Delivery · AI &amp; Automation Transformation</div>
+        <div class="contact">Global Delivery: India, US, Sri Lanka, Canada &amp; Mexico · jating@virtusa.com · Virtusa · Health Payer Client</div>
+      </div>
+    </header>
+
+    <p class="summary">Director with 18+ years leading AI, intelligent automation, and global delivery programs across healthcare payer operations. Proven record of converting complex operations into enterprise value by growing accounts from $16M to $21M, supporting a $33M consolidation deal, and delivering $400M+ in business benefits. Deep expertise in agentic AI, RPA, GenAI COE, executive stakeholder management, and distributed delivery.</p>
+
+    <div class="metrics">
+      <div class="metric"><strong>$400M+</strong><span>Business Value</span></div>
+      <div class="metric"><strong>250+</strong><span>Automations</span></div>
+      <div class="metric"><strong>38-40%</strong><span>YoY Growth</span></div>
+      <div class="metric"><strong>5</strong><span>Countries Led</span></div>
+    </div>
+
+    <div class="columns">
+      <main>
+        <section class="section">
+          <div class="section-title">Professional Experience</div>
+          <div class="job">
+            <div class="job-top"><div class="role">Director / Global End-to-End Delivery Leader</div><div class="period">Oct 2016 - Present</div></div>
+            <div class="company">Virtusa · Health Payer Client · HIL Business Unit</div>
+            <ul>
+              <li>Lead global delivery across India, US, Sri Lanka, Canada, and Mexico.</li>
+              <li>Delivered and maintained 250+ automation solutions generating approximately $400M in business benefits.</li>
+              <li>Grew account revenue from $16M to $21M, achieving 38-40% year-over-year growth.</li>
+              <li>Secured $17M TCV for OIA support and supported a $33M five-year vendor consolidation deal.</li>
+              <li>Expanded Express Scripts revenue 8x over two years.</li>
+              <li>Delivered $7M annual savings through Clarif AI Recommendation Engine.</li>
+              <li>Reduced call center handling time by 30% through Knowledge Exchange Genie.</li>
+              <li>Maintained less than 5% attrition and expanded executive stakeholders from 3 to 7.</li>
+              <li>Enabled 80% OIA team cross-skilling across UiPath, Blue Prism, and Pega Robotics.</li>
+            </ul>
+          </div>
+          <div class="job">
+            <div class="job-top"><div class="role">Manager - Automation &amp; Process Transformation</div><div class="period">Mar 2008 - Sep 2016</div></div>
+            <div class="company">EXL Services · Bangalore, India</div>
+            <ul>
+              <li>Transformed finance and accounting processes through RPA and process improvement; delivered $100K savings in year one.</li>
+              <li>Migrated 200 users to new VDI infrastructure within 60 days with no productivity impact.</li>
+              <li>Reduced process time by 320 hours per month and delivered $180K in transformation savings.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Selected Strategic Wins</div>
+          <ul>
+            <li><strong>OIA Vendor Consolidation:</strong> supported $33M deal and secured $17M TCV over five years.</li>
+            <li><strong>AI Center of Excellence:</strong> delivered $7M annual savings and 30% call handling time reduction.</li>
+            <li><strong>Automation Portfolio:</strong> institutionalized assessment and ROI frameworks across 250+ solutions.</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside class="side">
+        <section class="section"><div class="section-title">Automation &amp; AI Platforms</div><div class="tag-wrap"><span class="tag">UiPath</span><span class="tag">Blue Prism</span><span class="tag">Automation Anywhere</span><span class="tag">Pega Robotics</span><span class="tag">ABBYY</span><span class="tag">WorkFusion</span><span class="tag">Kore.ai</span><span class="tag">Celonis</span></div></section>
+        <section class="section"><div class="section-title">Leadership &amp; Delivery</div><div class="tag-wrap"><span class="tag">Global Delivery</span><span class="tag">Revenue Growth</span><span class="tag">Margin Optimization</span><span class="tag">Stakeholder Management</span><span class="tag">CoE Setup</span><span class="tag">People Development</span><span class="tag">Portfolio Governance</span></div></section>
+        <section class="section"><div class="section-title">Domain Strength</div><div class="tag-wrap"><span class="tag">Healthcare</span><span class="tag">Insurance</span><span class="tag">Payer Operations</span><span class="tag">Claims Operations</span><span class="tag">Express Scripts</span><span class="tag">AI COE</span><span class="tag">OIA</span></div></section>
+        <section class="section"><div class="section-title">Strategic Focus</div><div class="tag-wrap"><span class="tag">Agentic AI</span><span class="tag">AI Residency</span><span class="tag">GenAI Upskilling</span><span class="tag">Operating Model</span><span class="tag">Automation ROI</span><span class="tag">Executive Communication</span></div></section>
+        <section class="section"><div class="section-title">Leadership Highlights</div><ul class="side-list"><li>5-country distributed delivery leadership</li><li>Less than 5% team attrition</li><li>30% AI-driven revenue contribution</li><li>Executive stakeholder expansion</li><li>AI-first operating model development</li></ul></section>
+        <section class="section"><div class="section-title">Future Vision</div><p class="vision">Scale Health Payer Client toward $50M through AI expansion, stable TCV programs, PBM, Behavioral Health, and an AI residency model that creates repeatable enterprise value.</p></section>
+      </aside>
+    </div>
+    <div class="footer-note">One-page resume formatted for US Letter printing. Use the Download Resume button for the fixed-layout one-page version.</div>
+  </article>
+</body>
+</html>
